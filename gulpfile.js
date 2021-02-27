@@ -52,6 +52,7 @@ function css(done) {
 function js(done) {
     pump([
         src([
+            'node_modules/jquery/dist/jquery.js',
             'assets/js/lib/*.js',
             'assets/js/main.js'
         ], {sourcemaps: true}),
