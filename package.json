@@ -41,6 +41,7 @@
         }
     },
     "scripts": {
+        "build": "gulp build",
         "dev": "gulp",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
@@ -54,6 +55,7 @@
         "gscan": "3.6.1",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
+        "gulp-google-webfonts": "^4.0.0",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.0",
         "gulp-stylelint": "13.0.0",

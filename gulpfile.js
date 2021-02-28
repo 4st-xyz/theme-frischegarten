@@ -9,6 +9,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
 const zip = require('gulp-zip');
+const googleWebFonts = require('gulp-google-webfonts');
 
 // postcss plugins
 const easyimport = require('postcss-easy-import');
@@ -45,6 +46,21 @@ function css(done) {
             cssnano()
         ]),
         dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
+function gwf(done) {
+    pump([
+        src([
+            './google-fonts.list'
+        ]),
+        googleWebFonts({
+            fontsDir: 'fonts',
+            cssDir: '.',
+            cssFilename: 'fonts.css',
+        }),
+        dest('assets/built'),
         livereload()
     ], handleError(done));
 }
@@ -94,8 +110,9 @@ function zipper(done) {
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs', 'members/**/*.hbs'], hbs);
 const cssWatcher = () => watch('assets/css/**/*.css', css);
 const jsWatcher = () => watch('assets/js/**/*.js', js);
-const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
-const build = series(css, js);
+const gwfWatcher = () => watch('google-fonts.list', gwf);
+const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher, gwfWatcher);
+const build = series(gwf, css, js);
 
 exports.build = build;
 exports.lint = lint;

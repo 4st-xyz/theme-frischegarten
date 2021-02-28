@@ -1,0 +1,6 @@
+# Tab-delimeted format
+#Oswald	400,700	latin,latin-ext
+# Google format
+#Roboto:500,500italic&subset=greek
+Bellota+Text:400,700,400italic,700italic
+Bellota:400,700,400italic,700italic

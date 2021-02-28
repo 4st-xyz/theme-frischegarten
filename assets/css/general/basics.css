@@ -1,5 +1,5 @@
 :root {
-    --brand-color: #ff572f;
+    --brand-color: #6b982e;
     --primary-text-color: #333;
     --secondary-text-color: #999;
     --white-color: #fff;
@@ -16,7 +16,7 @@
     --twitter-color: #1da1f2;
     --rss-color: #f26522;
     --animation-base: ease-in-out;
-    --font-base: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
+    --font-base: Bellota Text, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
     --navbar-height: 80px;
 }
