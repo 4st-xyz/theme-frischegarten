@@ -1,9 +1,9 @@
 <article class="feed {{post_class}}">
     <div class="feed-calendar">
-        <div class="feed-calendar-day">
+        <div class="feed-calendar-month">
             {{date published_at format="DD."}}
         </div>
-        <div class="feed-calendar-month">
+        <div class="feed-calendar-day">
             {{date published_at format="MMM"}}
         </div>
     </div>
@@ -15,7 +15,7 @@
             </svg>
         {{/if}}
         <div class="feed-length">
-            {{reading_time}}
+            {{reading_time minute="etwa 1 min" minutes="etwa % min"}}
         </div>
     </div>
     <svg class="icon feed-icon">
