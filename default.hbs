@@ -26,6 +26,22 @@
         }
     </script>
 
+    {{! colorful tags }}
+    {{#get "tags" limit="all"}}
+        <style>
+            {{#foreach tags}}
+                body.tag-{{slug}} {
+                    --brand-color: {{accent_color}};
+                }
+                .single-meta-tag .post-tag-{{slug}},
+                .tag-{{slug}} .tag-name,
+                .tag-{{slug}} .feed-calendar {
+                    color: {{accent_color}};
+                }
+            {{/foreach}}
+        </style>
+    {{/get}}
+
     {{ghost_head}}
 </head>
 
