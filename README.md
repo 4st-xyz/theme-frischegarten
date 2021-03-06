@@ -40,6 +40,16 @@ When your site has lots of posts, including the post content in the index cache 
 </script>
 ```
 
+# Block iframes
+
+Does block iframes (only when JS is enabled!) and allows the user to unblock them by clicking on it (like click-to-play).
+
+```html
+<script>
+    var gh_block_iframes = true;
+</script>
+```
+
 # White Logo
 
 If your logo image isn't recognizable in dark mode, you can set a white version of the logo in `Code injection > Site Header` field.
