@@ -266,7 +266,7 @@ function toc() {
 
             $('html, body').animate(
                 {
-                    scrollTop: $(link).offset().top - 82,
+                    scrollTop: $('[id="' + link.substring(1) + '"]').offset().top - 82,
                 },
                 500
             );
